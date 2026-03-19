@@ -18,6 +18,21 @@
             padding: 1rem;
             text-align: center;
         }
+        .lang-switcher {
+            text-align: center;
+            padding: 0.5rem;
+            background-color: #f0f0f0;
+        }
+        .lang-switcher button {
+            padding: 0.5rem 1rem;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            cursor: pointer;
+        }
+        .lang-switcher button.active {
+            background-color: #004080;
+            color: white;
+        }
         .nav {
             display: flex;
             justify-content: center;
@@ -52,6 +67,16 @@
             max-width: 100%;
             height: auto;
         }
+        .gallery-item .desc {
+            text-align: left;
+        }
+        .gallery-item .desc-ur {
+            text-align: right;
+            direction: rtl;
+        }
+        .hidden {
+            display: none;
+        }
         .footer {
             background-color: #333;
             color: white;
@@ -69,6 +94,11 @@
         <h1>Welcome to IPS Colleges of VU - Tech Hub</h1>
     </header>
 
+    <div class="lang-switcher">
+        <button id="lang-en" class="active">English</button>
+        <button id="lang-ur">اردو</button>
+    </div>
+
     <nav class="nav">
         <a href="#tech">INFORMATION TECHNOLOGY</a>
         <a href="#ai">Artificial Intelligence</a>
@@ -83,32 +113,38 @@
             <div id="tech" class="gallery-item">
                 <h3>INFORMATION TECHNOLOGY</h3>
                 <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Technology">
-                <p>Information Technology (IT) is the backbone of the digital world. It involves using computers, software, and networks to manage and distribute information. This field is essential for modern business, communication, and entertainment. In simple terms, IT helps us use technology to solve problems and make our lives easier.</p>
+                <p class="desc desc-en">Information Technology (IT) is the backbone of the digital world. It involves using computers, software, and networks to manage and distribute information. This field is essential for modern business, communication, and entertainment. In simple terms, IT helps us use technology to solve problems and make our lives easier.</p>
+                <p class="desc desc-ur hidden">انفارمیشن ٹیکنالوجی (آئی ٹی) ڈیجیٹل دنیا کی ریڑھ کی ہڈی ہے۔ اس میں معلومات کو منظم اور تقسیم کرنے کے لیے کمپیوٹر، سافٹ ویئر اور نیٹ ورکس کا استعمال شامل ہے۔ یہ شعبہ جدید کاروبار، مواصلات اور تفریح کے لیے ضروری ہے۔ آسان الفاظ میں، آئی ٹی ہمیں مسائل کو حل کرنے اور اپنی زندگی کو آسان بنانے کے لیے ٹیکنالوجی کا استعمال کرنے میں مدد کرتی ہے۔</p>
             </div>
             <div id="ai" class="gallery-item">
                 <h3>Artificial Intelligence</h3>
                 <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="AI">
-                <p>Artificial Intelligence, or AI, is the science of making machines that can think and learn like humans. This includes tasks like recognizing speech, making decisions, and understanding images. AI is a rapidly growing field that is changing how we interact with technology, from virtual assistants to self-driving cars.</p>
+                <p class="desc desc-en">Artificial Intelligence, or AI, is the science of making machines that can think and learn like humans. This includes tasks like recognizing speech, making decisions, and understanding images. AI is a rapidly growing field that is changing how we interact with technology, from virtual assistants to self-driving cars.</p>
+                <p class="desc desc-ur hidden">مصنوعی ذہانت، یا اے آئی، ایسی مشینیں بنانے کی سائنس ہے جو انسانوں کی طرح سوچ اور سیکھ سکتی ہیں۔ اس میں تقریر کو پہچاننا، فیصلے کرنا، اور تصاویر کو سمجھنا جیسے کام شامل ہیں۔ اے آئی ایک تیزی سے ترقی کرنے والا شعبہ ہے جو ورچوئل اسسٹنٹس سے لے کر خود چلانے والی کاروں تک، ٹیکنالوجی کے ساتھ ہمارے تعامل کے طریقے کو بدل رہا ہے۔</p>
             </div>
             <div id="robotics" class="gallery-item">
                 <h3>Robotics</h3>
-                <img src="https://plus.unsplash.com/premium_photo-1678565869434-c81195861939?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Robotics">
-                <p>Robotics is a field of technology that deals with the design, construction, operation, and use of robots. Robots are machines that can be programmed to perform a series of actions automatically. They are used in many industries, from manufacturing and healthcare to exploration and entertainment. Robotics combines engineering, computer science, and AI to create machines that can help and assist humans.</p>
+                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTViYmYwN2Y2Y2M3YmZlOTBlMGE5MjI4Njc4Mzg3MjI0YjFjYmY1ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7TNVmJb3I4HhR4T6/giphy.gif" alt="Robotics">
+                <p class="desc desc-en">Robotics is a field of technology that deals with the design, construction, operation, and use of robots. Robots are machines that can be programmed to perform a series of actions automatically. They are used in many industries, from manufacturing and healthcare to exploration and entertainment. Robotics combines engineering, computer science, and AI to create machines that can help and assist humans.</p>
+                <p class="desc desc-ur hidden">روبوٹکس ٹیکنالوجی کا ایک شعبہ ہے جو روبوٹس کے ڈیزائن، تعمیر، آپریشن اور استعمال سے متعلق ہے۔ روبوٹ ایسی مشینیں ہیں جنہیں خود بخود کاموں کی ایک سیریز انجام دینے کے لیے پروگرام کیا جا सकता ہے۔ وہ مینوفیکچرنگ اور صحت کی دیکھ بھال سے لے کر ریسرچ اور تفریح تک بہت سی صنعتوں میں استعمال ہوتے ہیں۔ روبوٹکس انجینئرنگ، کمپیوٹر سائنس، اور اے آئی کو ملا کر ایسی مشینیں بناتا ہے جو انسانوں کی مدد اور مدد کر سکتی ہیں۔</p>
             </div>
             <div id="cs" class="gallery-item">
                 <h3>Computer Science</h3>
                 <img src="https://images.unsplash.com/photo-1550439062-609e1531270e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Computer Science">
-                <p>Computer Science is the study of computers and computational systems. It covers everything from the theory of computation to the design of software and hardware. Computer scientists create new technologies, solve complex problems, and develop the algorithms that power the digital world. It is a foundational field for many areas of technology.</p>
+                <p class="desc desc-en">Computer Science is the study of computers and computational systems. It covers everything from the theory of computation to the design of software and hardware. Computer scientists create new technologies, solve complex problems, and develop the algorithms that power the digital world. It is a foundational field for many areas of technology.</p>
+                <p class="desc desc-ur hidden">کمپیوٹر سائنس کمپیوٹرز اور کمپیوٹیشنل سسٹمز کا مطالعہ ہے۔ اس میں کمپیوٹیشن کے نظریہ سے لے کر سافٹ ویئر اور ہارڈویئر کے ڈیزائن تک سب کچھ شامل ہے۔ کمپیوٹر سائنس دان نئی ٹیکنالوجیز بناتے ہیں، پیچیدہ مسائل حل کرتے ہیں، اور ڈیجیٹل دنیا کو طاقت دینے والے الگورتھم تیار کرتے ہیں۔ یہ ٹیکنالوجی کے بہت سے شعبوں کے لیے ایک بنیادی شعبہ ہے۔</p>
             </div>
             <div id="se" class="gallery-item">
                 <h3>Software Engineering</h3>
                 <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Software Engineering">
-                <p>Software Engineering is the process of designing, developing, testing, and maintaining software. It applies engineering principles to create reliable and efficient software applications. Software engineers work in teams to build everything from mobile apps and websites to large-scale enterprise systems. This field is crucial for creating the software that we use every day.</p>
+                <p class="desc desc-en">Software Engineering is the process of designing, developing, testing, and maintaining software. It applies engineering principles to create reliable and efficient software applications. Software engineers work in teams to build everything from mobile apps and websites to large-scale enterprise systems. This field is crucial for creating the software that we use every day.</p>
+                <p class="desc desc-ur hidden">سافٹ ویئر انجینئرنگ سافٹ ویئر کو ڈیزائن کرنے، تیار کرنے، جانچنے اور برقرار رکھنے کا عمل ہے۔ یہ قابل اعتماد اور موثر سافٹ ویئر ایپلی کیشنز بنانے کے لیے انجینئرنگ کے اصولوں کا اطلاق کرتا ہے۔ سافٹ ویئر انجینئرز موبائل ایپس اور ویب سائٹس سے لے کر بڑے پیمانے پر انٹرپرائز سسٹمز تک ہر چیز بنانے کے لیے ٹیموں میں کام کرتے ہیں۔ یہ فیلڈ وہ سافٹ ویئر بنانے کے لیے بہت اہم ہے جسے ہم ہر روز استعمال کرتے ہیں۔</p>
             </div>
             <div id="ds" class="gallery-item">
                 <h3>Data Science</h3>
                 <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Data Science">
-                <p>Data Science is the field of study that combines domain expertise, programming skills, and knowledge of mathematics and statistics to extract meaningful insights from data. Data scientists use various tools and techniques to analyze large amounts of data, identify trends, and make predictions. This helps organizations make better decisions and understand their customers and markets.</p>
+                <p class="desc desc-en">Data Science is the field of study that combines domain expertise, programming skills, and knowledge of mathematics and statistics to extract meaningful insights from data. Data scientists use various tools and techniques to analyze large amounts of data, identify trends, and make predictions. This helps organizations make better decisions and understand their customers and markets.</p>
+                <p class="desc desc-ur hidden">ڈیٹا سائنس مطالعہ کا وہ شعبہ ہے جو ڈیٹا سے بامعنی بصیرت نکالنے کے لیے ڈومین کی مہارت، پروگرامنگ کی مہارت، اور ریاضی اور شماریات کے علم کو یکجا کرتا ہے۔ ڈیٹا سائنس دان بڑی مقدار میں ڈیٹا کا تجزیہ کرنے، رجحانات کی نشاندہی کرنے اور پیشین گوئیاں کرنے کے لیے مختلف ٹولز اور تکنیکوں کا استعمال کرتے ہیں۔ اس سے تنظیموں کو بہتر فیصلے کرنے اور اپنے صارفین اور بازاروں کو سمجھنے میں مدد मिलती ہے۔</p>
             </div>
         </div>
     </div>
@@ -116,6 +152,35 @@
     <footer class="footer">
         <p>&copy; 2023 IPS Colleges of VU. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        const langEnBtn = document.getElementById('lang-en');
+        const langUrBtn = document.getElementById('lang-ur');
+        const descsEn = document.querySelectorAll('.desc-en');
+        const descsUr = document.querySelectorAll('.desc-ur');
+
+        langEnBtn.addEventListener('click', () => {
+            setLanguage('en');
+        });
+
+        langUrBtn.addEventListener('click', () => {
+            setLanguage('ur');
+        });
+
+        function setLanguage(lang) {
+            if (lang === 'en') {
+                langEnBtn.classList.add('active');
+                langUrBtn.classList.remove('active');
+                descsEn.forEach(desc => desc.classList.remove('hidden'));
+                descsUr.forEach(desc => desc.classList.add('hidden'));
+            } else if (lang === 'ur') {
+                langUrBtn.classList.add('active');
+                langEnBtn.classList.remove('active');
+                descsUr.forEach(desc => desc.classList.remove('hidden'));
+                descsEn.forEach(desc => desc.classList.add('hidden'));
+            }
+        }
+    </script>
 
 </body>
 </html>
